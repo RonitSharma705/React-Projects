@@ -1,0 +1,174 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+body {
+  font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #1e1f23, #2b2c31, #1a1b1f);
+  background-size: 400% 400%;
+  animation: gradientBG 12s ease infinite;
+  margin: 0;
+  padding: 40px;
+  color: #f5f5f5;
+}
+
+/* Title */
+h2 {
+  color: #fff;
+  font-size: 26px;
+  margin-bottom: 20px;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+/* Smooth gradient animation */
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Shared Glass Card Styles */
+.glass-card {
+  width: 90%;
+  margin: 0 auto 20px auto;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.25);
+  border: 1px solid rgba(255,255,255,0.15);
+}
+
+/* Form Container */
+.form-container {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+/* Inputs */
+.form-container input {
+  padding: 10px 14px;
+  border-radius: 8px;
+  border: 1px solid rgba(255,255,255,0.25);
+  background: rgba(255,255,255,0.08);
+  color: #fff;
+  font-size: 14px;
+  outline: none;
+  min-width: 140px;
+  transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-container input::placeholder {
+  color: rgba(255,255,255,0.6);
+}
+
+.form-container input:focus {
+  border: 1px solid #3498db;
+  box-shadow: 0 0 10px rgba(52,152,219,0.5);
+}
+
+/* Buttons */
+button {
+  margin: 0 6px;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-size: 14px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.3s ease-in-out;
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.25);
+  color: #f5f5f5;
+  backdrop-filter: blur(6px);
+}
+
+/* Save button */
+button.save {
+  border-color: #3498db;
+  color: #3498db;
+}
+button.save:hover {
+  background: #3498db;
+  color: #fff;
+  box-shadow: 0 0 12px rgba(52,152,219,0.6);
+}
+
+/* Clear button */
+button.clear {
+  border-color: #e74c3c;
+  color: #e74c3c;
+}
+button.clear:hover {
+  background: #e74c3c;
+  color: #fff;
+  box-shadow: 0 0 12px rgba(231,76,60,0.6);
+}
+
+/* Edit button */
+button.edit {
+  border-color: #3498db;
+  color: #3498db;
+}
+button.edit:hover {
+  background: #3498db;
+  color: #fff;
+  box-shadow: 0 0 12px rgba(52,152,219,0.6);
+}
+
+/* Delete button */
+button.delete {
+  border-color: #e74c3c;
+  color: #e74c3c;
+}
+button.delete:hover {
+  background: #e74c3c;
+  color: #fff;
+  box-shadow: 0 0 12px rgba(231,76,60,0.6);
+}
+
+/* Table */
+.table-container {
+  overflow: hidden;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+thead {
+  background: rgba(255,255,255,0.12);
+  border-bottom: 1px solid rgba(255,255,255,0.2);
+}
+
+thead td {
+  padding: 16px 20px;
+  font-weight: 600;
+  text-align: left;
+  font-size: 15px;
+  color: #e0e0e0;
+  letter-spacing: 0.3px;
+}
+
+tbody td {
+  padding: 14px 20px;
+  font-size: 14px;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+  color: #f5f5f5;
+}
+
+tbody tr:last-child td {
+  border-bottom: none;
+}
+
+tbody tr:hover {
+  background: rgba(255,255,255,0.08);
+  transition: background 0.3s ease-in-out;
+}
